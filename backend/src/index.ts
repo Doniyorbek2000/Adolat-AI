@@ -26,6 +26,11 @@ const limiter = rateLimit({
 app.use('/api/', limiter);
 
 app.use(express.json({ limit: '10mb' }));
+
+app.get('/', (req, res) => {
+  res.json({ status: 'active', message: 'Adolat AI Backend is running' });
+});
+
 // ... qolgan kodlar
 
 const JWT_SECRET = process.env.JWT_SECRET || 'supersecret';
