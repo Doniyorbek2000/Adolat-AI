@@ -10,9 +10,9 @@ import jwt from 'jsonwebtoken';
 const app = express();
 
 // Xavfsizlik qatlamlari
-app.use(helmet()); // Headerlarni himoya qilish
+app.use(helmet());
 app.use(cors({
-    origin: process.env.NODE_ENV === 'production' ? ['https://adolat-ai.uz'] : '*',
+    origin: '*', // Mobil ilova uchun hamma joydan ruxsat beramiz
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
