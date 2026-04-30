@@ -1,1 +1,30 @@
-node_modules
+node_modules/
+.expo/
+dist/
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+package-lock.json
+yarn.lock
+
+# Android
+android/
+*.apk
+*.aab
+*.keystore
+
+# iOS
+ios/
+.bundle/
+vendor/bundle/
+
+# Backend
+backend/
+
+# Local env files
+.env*.local
+.env
+.env.test
+
+# Typo folders
+"{src"/

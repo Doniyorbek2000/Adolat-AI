@@ -30,15 +30,18 @@ const config: ExpoConfig = {
     },
     package: 'uz.adolatai.app',
     versionCode: 1,
-    permissions: ['RECORD_AUDIO', 'CAMERA', 'READ_EXTERNAL_STORAGE', 'WRITE_EXTERNAL_STORAGE'],
+    permissions: ['RECORD_AUDIO', 'CAMERA', 'MODIFY_AUDIO_SETTINGS'],
   },
   plugins: [
     'expo-secure-store',
     ['expo-av', { microphonePermission: 'Ovozli xabar uchun mikrofon kerak' }],
     ['expo-image-picker', { photosPermission: 'Hujjat yuklash uchun galereya kerak' }],
+    'expo-localization',
   ],
   extra: {
-    eas: { projectId: 'your-eas-project-id' },
+    eas: {
+      projectId: "d190d50c-58bc-45ab-ae79-463a30851ece"
+    },
     openaiKey: process.env.EXPO_PUBLIC_OPENAI_API_KEY,
   },
 };
